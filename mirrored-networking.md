@@ -63,3 +63,9 @@ Example:
 ![MoveIt running in WSL with UR3e](images/ur3e_moveit_wsl.png)
 
 ![Successful execution controlling UR3e from WSL](images/ur3e_moveit_execution.png)
+
+# Note on real-time drivers
+
+Although mirrored networking works well for many workflows, some ROS drivers expect high-rate real-time communication.
+
+For example, the Universal Robots driver updates at around **500 Hz** by default, so timing or communication warnings can still appear when running from WSL2.
